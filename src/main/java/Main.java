@@ -1,3 +1,6 @@
+import Parsers.FileParser;
+import Parsers.FolderFileParser;
+import StandardConfiguration.StandardConfiguration;
 import SuperClasses.SuperParser;
 import org.apache.log4j.Logger;
 
@@ -29,13 +32,13 @@ public class Main {
     private static SuperParser getParserFromArgument(String argument) {
         switch (argument) {
             case "FolderFileLeft":
-                return null;
+                return new FolderFileParser(argument, StandardConfiguration.FOLDER_FILE_LEFT_PARSER_CONFIGS);
             case "FolderFileRight":
-                return null;
+                return new FolderFileParser(argument, StandardConfiguration.FOLDER_FILE_RIGHT_PARSER_CONFIGS);
             case "FileLeft":
-                return null;
+                return new FileParser(argument, StandardConfiguration.FILE_LEFT_PARSER_CONFIGS);
             case "FileRight":
-                return null;
+                return new FileParser(argument, StandardConfiguration.FILE_RIGHT_PARSER_CONFIGS);
             default:
                 return null;
         }

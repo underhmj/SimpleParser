@@ -8,6 +8,8 @@ public class ParserConfigs {
         private File pathToWrite;
         private FinderConfigs finderConfigs;
         private String delimiter;
+        private Integer numberOfItems;
+        private Integer itemToGrab;
 
         public Builder() {}
 
@@ -31,12 +33,24 @@ public class ParserConfigs {
             return this;
         }
 
+        public Builder setNumberOfItems(Integer numberOfItems) {
+            this.numberOfItems = numberOfItems;
+            return this;
+        }
+
+        public Builder setItemToGrab(Integer itemToGrab) {
+            this.itemToGrab = itemToGrab;
+            return this;
+        }
+
         public ParserConfigs build() {
             ParserConfigs parserConfigs = new ParserConfigs();
             parserConfigs.pathToRead = this.pathToRead;
             parserConfigs.pathToWrite = this.pathToWrite;
             parserConfigs.finderConfigs = this.finderConfigs;
             parserConfigs.delimiter = this.delimiter;
+            parserConfigs.numberOfItems = this.numberOfItems;
+            parserConfigs.itemToGrab = this.itemToGrab;
             return parserConfigs;
         }
     }
@@ -45,6 +59,8 @@ public class ParserConfigs {
     private File pathToWrite;
     private FinderConfigs finderConfigs;
     private String delimiter;
+    private Integer numberOfItems;
+    private Integer itemToGrab;
 
     private ParserConfigs() {}
 
@@ -62,5 +78,13 @@ public class ParserConfigs {
 
     public String getDelimiter() {
         return delimiter;
+    }
+
+    public Integer getNumberOfItems() {
+        return numberOfItems;
+    }
+
+    public Integer getItemToGrab() {
+        return itemToGrab;
     }
 }
