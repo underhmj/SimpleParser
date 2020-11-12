@@ -8,12 +8,12 @@ display a few different areas.)
 Inside of the Main class, you will see a simple switch statement.  This statement builds four different parsers: 'FolderFileLeft',
 'FolderFileRight', 'FileLeft', and 'FileRight'. If you choose 'FolderFileLeft' or 'FolderFileRight' the parser will first
 look for folders as given in the FinderConfigs, then target the files by the same configurations.  It will either grab the
-characters on the left of the right of the delimiter depending on the argument you selected.
+characters on the left or the right of the delimiter depending on the argument you selected.
 If you select 'FileLeft' or 'FileRight' the parser will not look for folders, and will not enter any folders. It will simply
 parse the files in the single folder that it is running in or pointed to.
 
 Each parser has configurations that are statically set up from the **StandardConfiguration** class in
-the same named directory.  As it is, all of the parsers have the same configurations, but you can change them to a path
+the same named directory.  As it is, all of the parsers have the same read and write configurations, but you can change them to a path
 on your machine, or keep them to run relative to where you place the .JAR.
 
 >If you choose to keep the path the same (relative path) then you must place the .JAR into the folder that you would like
@@ -22,7 +22,7 @@ on your machine, or keep them to run relative to where you place the .JAR.
 If you would like some sample data to run this on, a folder structure with sample .txt files are located
 at *SimpleParser/test/SampleToRun*.  This uses the same data as the unit tests, so you must simply copy and paste them onto
 your machine. If you do not want to make any changes to the configurations, simply place the .JAR in the SampleToRun directory.
-*You will see there is a file in there called 'PlaceJavaHere.txt' so that you can be sure it is in the proper location for relative
+*You will see there is a file in there called 'PutJarHere.txt' so that you can be sure it is in the proper location for relative
 configuration.*
 
 ## How to Run the Project
